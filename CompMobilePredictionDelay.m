@@ -35,14 +35,14 @@ x = [4,8,12,16,20,24,28,32,36,40,44,48,52,56,60];
 beforeOptY1 = [3.5073,3.3825,3.3797,3.3171,3.35,3.5189,3.373,3.3606,3.3867,3.4035,3.3219,4.3794,5.2066,6.0346,6.7699];
 %   两种业务类型-B
 beforeOptY2 = [3.4689,3.2193,3.3188,3.2922,3.3401,3.4145,3.3383,3.3867,3.3904,3.3362,3.3514,3.4166,3.3596,3.3671,3.2832];
-beforeOptY = beforeOptY1 + beforeOptY2;
+beforeOptY = (beforeOptY1 + beforeOptY2)./2;
 plot(x,beforeOptY,'*-','linewidth',lineWidth, 'DisplayName', '优化前');
 
 %   两种业务类型-A
 afterOptY1 = [2.0708,1.8695,1.9713,1.9845,1.9354,1.9526,1.9415,1.9257,1.9523,1.9714,1.9728,2.5667,2.9336,3.4735,3.8844];
 %   两种业务类型-B
 afterOptY2 = [1.8476,1.9002,1.9431,1.8972,1.9062,1.8756,1.8762,1.9008,1.9258,1.9134,1.8521,1.8816,1.925,1.9054,1.9237];
-afterOptY = afterOptY1 + afterOptY2;
+afterOptY = (afterOptY1 + afterOptY2)./2;
 plot(x,afterOptY,'o-','linewidth',lineWidth, 'DisplayName', '优化后');
 
 % axis([0 60 0 1100]);
@@ -69,7 +69,7 @@ beforeOptY1 = [3.372,3.5551,3.4404,3.411,3.4107,3.4089,3.382,4.4772,5.1141,5.721
 beforeOptY2 = [3.2403,3.3849,3.3383,3.3651,3.2739,3.2547,3.2726,3.3292,3.345,3.3138];
 %   三种业务类型-C
 beforeOptY3 = [3.3466,3.3268,3.3388,3.2789,3.3419,3.2832,3.3499,3.2241,3.288,3.306];
-beforeOptY = beforeOptY1 + beforeOptY2 + beforeOptY3;
+beforeOptY = (beforeOptY1 + beforeOptY2 + beforeOptY3)./3;
 plot(x,beforeOptY,'*-','linewidth',lineWidth, 'DisplayName', '优化前');
 
 
@@ -79,7 +79,7 @@ afterOptY1 = [1.9735,1.9322,1.9424,1.9662,1.9162,1.9193,1.959,2.5406,2.9539,3.32
 afterOptY2 = [1.9156,1.9036,1.9685,1.9403,1.9169,1.8605,1.9024,1.8848,1.9159,1.9263];
 %   三种业务类型-C
 afterOptY3 = [1.9403,1.837,1.8697,1.869,1.8715,1.8781,1.8542,1.8395,1.8791,1.9018];
-afterOptY = afterOptY1 + afterOptY2 + afterOptY3;
+afterOptY = (afterOptY1 + afterOptY2 + afterOptY3)./3;
 plot(x,afterOptY,'o-','linewidth',lineWidth, 'DisplayName', '优化后')
 
 % axis([0 60 0 800]);
@@ -109,7 +109,7 @@ beforeOptY3 = [3.1156,3.1832,3.3287,3.3752,3.3149,3.247,3.2809];
 %   四种业务类型-D
 beforeOptY4 = [3.4086,3.0796,3.2328,3.1665,3.1962,3.1958,3.2492];
 
-beforeOptY = beforeOptY1 + beforeOptY2 + beforeOptY3 + beforeOptY4;
+beforeOptY = (beforeOptY1 + beforeOptY2 + beforeOptY3 + beforeOptY4)./4;
 plot(x,beforeOptY,'*-','linewidth',lineWidth, 'DisplayName', '优化前');
 
 
@@ -122,10 +122,10 @@ afterOptY3 = [1.8803,1.829,1.8812,1.9217,1.8569,1.887,1.84];
 %   四种业务类型-D
 afterOptY4 = [1.8491,1.8344,1.7682,1.8551,1.8248,1.8502,1.8653];
 
-afterOptY = afterOptY1 + afterOptY2 + afterOptY3 + afterOptY4;
+afterOptY = (afterOptY1 + afterOptY2 + afterOptY3 + afterOptY4)./4;
 plot(x,afterOptY,'o-','linewidth',lineWidth, 'DisplayName', '优化后')
 
-% axis([0 60 0 800]);
+axis([0 60 1.5 4.5]);
 legend('Location', 'northwest')  % 指定图例位置
 legend('boxoff');  % 关闭图例框线
 
