@@ -24,10 +24,15 @@ plot(x3,y3,'s-','linewidth',lineWidth, 'DisplayName', '业务类型C')
 legend('Location', 'northwest')  % 指定图例位置
 legend('boxoff');  % 关闭图例框线
 
-title('TTNT节点数与系统吞吐量之间的关系','FontSize',13);
+%   求出系统吞吐量
+total = y1 + y2 + y3;
+plot(x3,total,'*-','linewidth',lineWidth, 'DisplayName', '业务类型C')
+
+title('TTNT节点数与业务吞吐量之间的关系','FontSize',13);
 xlabel('TTNT节点数（个）');
-ylabel('系统吞吐量 (Kbps)');
+ylabel('业务吞吐量 (Kbps)');
 grid on
 
 % 以600分辨率输出图片到当前目录
 print('-dpng','-r600','性能测试单跳_吞吐量3');
+%print('-dpng','-r600','性能测试单跳_系统吞吐量');

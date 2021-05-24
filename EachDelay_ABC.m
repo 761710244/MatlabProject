@@ -8,7 +8,7 @@ hold on
 
 %   三种业务类型-B
 x2 = [6,12,18,24,30,36,42,48,54,60];
-y2 = [1.7935, 1.7617, 1.7547, 1.7829, 1.7426, 1.7476, 1.7617, 1.7723, 1.7664, 1.7628];
+y2 = [1.7935, 1.7617, 1.7547, 1.7829, 1.7426, 1.7476, 1.7617, 2.7723, 3.7664, 5.7628];
 plot(x2,y2,'o-','linewidth',1.2, 'DisplayName', '业务类型B')
 hold on
 
@@ -22,9 +22,9 @@ plot(x3,y3,'s-','linewidth',1.2, 'DisplayName', '业务类型C');
 legend('Location', 'northwest')  % 指定图例位置
 legend('boxoff');  % 关闭图例框线
 
-title('TTNT节点数与系统时延之间的关系','FontSize',13);
+title('TTNT节点数与业务时延之间的关系','FontSize',13);
 xlabel('TTNT节点数（个）');
-ylabel('系统时延 (ms)');
+ylabel('业务时延 (ms)');
 grid on
 
 % 以600分辨率输出图片到当前目录
